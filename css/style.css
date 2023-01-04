@@ -1,0 +1,33 @@
+body {
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.navbar {
+    background: rgb(0, 0, 0);
+    border-bottom: 1px #333 solid;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+#home-section .home-inner {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    border: 1px #333 solid;
+    border-bottom: none;
+}
+
+.about-inner {
+    border: 1px #333 solid;
+    border-bottom: none;
+}
+
+#main-footer {
+    border-top: 1px #333 solid;
+}
+
+#year {
+    font-size: smaller;
+}
