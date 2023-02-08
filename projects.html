@@ -11,7 +11,6 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title>Fanny Balestrat</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -23,167 +22,8 @@
 <body data-spy="scroll" data-target="#main-nav" id="home" class="text-monospace">
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md" id="main-nav">
-        <a class="navbar-brand mb-0" href="#home"><span class="h3 text-monospace">Fanny Balestrat</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarLinks">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link h5" href="#home">About Me</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link h5" href="#projects">My Projects</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link h5" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+        <a class="navbar-brand mb-0" href="index.html"><span class="h3 text-monospace">Fanny Balestrat</span></a>
     </nav>
-
-    <!-- HOME SECTION -->
-    <header id="home-section">
-        <div class="home-inner container" onmouseenter="typeWriter()">
-            <div class="intro-section-flex">
-                <div class="section-1 title-desktop">
-                    <h1 class="display-5">Hi, I'm Fanny.</h1>
-                    <h4 id="intro-text"></h4>
-                    <h5 id="intro-text-2"></h5>
-                </div>
-                <div class="section-1 title-mobile">
-                    <p class="head-0">Hi, I'm Fanny.</p>
-                    <p class="head-1">I'm a Full Stack Developer.</p>
-                    <p class="head-2">I love science-fiction, paradoxes, coding and AI-generated abstract art.</p>
-                </div>
-                <div class="section-2">
-                    <div class="gallery-grid">
-                        <div class="gallery">
-                            <figure class="gallery__item gallery__item--1">
-                            <img src="img/AI_ART_6.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--2">
-                                <img src="img/AI_ART_4.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--3">
-                                <img src="img/AI_ART_5.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--4">
-                                <img src="img/AI_ART_1.png" class="gallery__img">
-                            </figure>
-                            <figure class="gallery__item gallery__item--5">
-                                <img src="img/AI_ART_8.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--6">
-                                <img src="img/AI_ART_3.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--7">
-                                <img src="img/AI_ART_2.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--8">
-                                <img src="img/AI_ART_9.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                            <figure class="gallery__item gallery__item--9">
-                                <img src="img/AI_ART_7.png" class="gallery__img" alt="Image 1">
-                            </figure>
-                        </div>
-                    </div>
-                    <small class="text-muted">Keywords: universe, dyson sphere, meaninglessness, time travel, gravity, space-time.</small>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- ABOUT ME SECTION -->
-    <section id="about-me">
-    <div class="about-inner container" onmouseover="displaySkills()">
-        <div class="row py-3 justify-content-center">
-            <div class="col-6-sm">
-                <h2 class="text-center">About Me</h2>
-                <p class="text-center px-5">Aerospace Engineering graduate with a passion for programming, AI, and computer science. I am driven by challenges, problem-solving and continuous improvement, development and learning. My interests include: psychology, boxing, traveling, playing music, books, riding motorcycles, board games, airplane modeling, and paradoxes.</p>
-            </div>
-        </div>
-        <div class="row py-3 justify-content-center">
-            <div class="col-6-sm">
-                <h3 class="text-center">My Skillset</h3>
-            </div>
-        </div>
-        <div class="row justify-content-center pt-3 pb-5" id="skillset">
-            <div class="col-md-2 col-sm-6">
-                <div class="progress html">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value"><img src="img/HTML.png" alt="" class="w-75"></div>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-                <div class="progress css">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value"><img src="img/CSS.png" alt="" class="w-75"></div>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-                <div class="progress js">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value"><img src="img/JAVASCRIPT.png" alt="" class="w-75"></div>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-                <div class="progress angular">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value"><img src="img/ANGULAR.png" alt="" class="w-50"></div>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-                <div class="progress java">
-                    <span class="progress-left"><span class="progress-bar"></span></span>
-                    <span class="progress-right"><span class="progress-bar"></span></span>
-                    <div class="progress-value"><img src="img/JAVA.png" alt="" class="w-50"></div>
-                </div>
-            </div>
-        </div> 
-        <div class="container text-monospace text-center">
-            <div class="row justify-content-center skills skills-desktop">
-                <div class="col-md-6">
-                    <ul>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Spring Boot</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Bootstrap</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Docker</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>MySQL</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Reactive Programming (RxJS)</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Object-Oriented Programming</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Agile Methodology</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Microservices</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center skills skills-mobile">
-                <div class="col">
-                    <ul class="pl-0">
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Reactive Programming (RxJS)</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Object-Oriented Programming</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Agile Methodology</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Microservices</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Spring Boot</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Bootstrap</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>Docker</li>
-                        <li><i class="fas fa-arrow-right fa-sm"></i>MySQL</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center pt-5 pb-5">
-                <a href="files/FannyBalestratDISC.pdf" target="_blank" class="btn btn-outline-light">My DISC Profile</a>
-            </div>
-        </div>
-    </div>
-    </section>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
@@ -401,52 +241,11 @@
             </div>
             <!-- End Project 3 -->
             <div class="row justify-content-center pb-5">
-                <a href="projects.html" class="btn btn-outline-light">View All Projects</a>
+                <a href="index.html" class="btn btn-outline-light">Back to Portfolio</a>
             </div>
         </div>
     </section>
     
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <div class="contact-inner container">
-            <div class="row py-3 justify-content-center">
-                <div class="col">
-                    <h2 class="text-center">Contact</h2>
-                    <p class="text-center">Have a question?</p>
-                    <p class="text-center" id="email-submission"></p>
-                </div>
-            </div>
-
-            <div class="row pb-4 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                <form>
-                    <div class="input-group input-group-md mb-2">
-                        <input type="text" class="form-control" placeholder="Name" id="name">
-                    </div>
-        
-                    <div class="input-group input-group-md mb-2">
-                        <input type="text" class="form-control" placeholder="Email" id="email">
-                    </div>
-        
-                    <div class="input-group input-group-md mb-3">
-                        <textarea class="form-control" placeholder="Message" rows="5" id="message"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <input type="submit" value="Submit" class="btn btn-outline-light" onclick="sendEmail()">
-                    </div>
-                </form>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <div class="p-3">
-                  <a href="https://www.linkedin.com/in/balestratfanny/" target="_blank">
-                    <i class="fab fa-lg fa-linkedin"></i>
-                  </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer id="main-footer">
         <div class="container footer">
@@ -465,107 +264,7 @@
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
-
-        // Init Scrollspy
-        $('body').scrollspy({ target: '#main-nav' });
-
-        // Smooth Scrolling
-        $("#main-nav a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-
-                const hash = this.hash;
-
-                $('html, body').animate({
-                scrollTop: $(hash).offset().top
-                }, 600, function () {
-
-                window.location.hash = hash;
-                });
-            }
-        });
     </script>
-    <script>
-        var i = 0;
-        var j = 0;
-        var txt = "I'm a Full Stack Developer."
-        var txt2 = "I love science-fiction, paradoxes, coding and AI-generated abstract art.";
-        var speed = 50;
-        var speed2 = 80;
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("intro-text").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            if (i == txt.length) {
-                typeWriter2();
-            }
-        }
-        function typeWriter2() {
-            if (j < txt2.length) {
-                document.getElementById("intro-text-2").innerHTML += txt2.charAt(j);
-                j++;
-                setTimeout(typeWriter2, speed2);
-            }
-        }
-
-        function displaySkills() {
-            document.getElementById("skillset").style.display = "flex";
-        }
-    </script>
-    <script>
-        function sendEmail() {
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
-        let body = `Name : ${name} <br> Email : ${email} <br> Message : ${message} <br>`;
-
-        if (name === "" || email === "" || message === "") {
-            document.getElementById("email-submission").innerHTML = "Please fill in all the fields.";
-            document.getElementById("email-submission").style.color = "red";
-            this.finalizeEmail();
-            return;
-        }
-
-        let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-
-            if (!emailRegex.test(email)) {
-                document.getElementById("email-submission").innerHTML = "Please enter a valid email address.";
-                document.getElementById("email-submission").style.color = "red";
-                this.finalizeEmail();
-                return;
-            }
-
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "fannybalestrat@gmail.com",
-                Password : "9D4E31458DDD1E8124B04EB3D1D884479AEA",
-                To : 'fannybalestrat@gmail.com',
-                From : 'fannybalestrat@gmail.com',
-                Subject : "Contact Email Received from Portfolio",
-                Body : body
-            }).then((message) => {  
-                console.log('message', message);
-                if (message === "OK") {
-                    document.getElementById("email-submission").innerHTML = "Email submitted successfully!";
-                    document.getElementById("email-submission").style.color = "green";
-                } else {
-                    document.getElementById("email-submission").innerHTML = "Error in submission: " + message;
-                    document.getElementById("email-submission").style.color = "red";
-                }
-            });
-            this.finalizeEmail();
-        }
-
-        function finalizeEmail() {
-            location.href = "#";
-            location.href = "#contact";
-            setTimeout(()=>{
-                document.getElementById("email-submission").innerHTML = "";
-            }, 30000)
-        }
-    </script>
+    
 </body>
 </html>
