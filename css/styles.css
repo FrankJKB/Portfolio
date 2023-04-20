@@ -2,6 +2,13 @@
 body { background: rgb(0, 0, 0); color: #fff; }
 body a:hover { color: grey; }
 .about-inner, .projects-inner, .contact-inner { border: 1px #333 solid; border-bottom: none; border-radius: 0.7%; }
+a {
+    color: grey;
+    font-weight: bold;
+}
+.w-100 {
+    border-radius: 10px;
+}
 
 /* NAVBAR STYLES */
 .navbar { background: rgb(0, 0, 0); border-bottom: 1px #333 solid; border-radius: 0.7%; }
