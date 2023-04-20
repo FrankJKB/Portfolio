@@ -476,7 +476,7 @@
                         <textarea class="form-control" placeholder="Message" rows="5" id="message"></textarea>
                     </div>
                     <div class="text-center">
-                        <input type="submit" value="Submit" class="btn btn-outline-light" onclick="sendEmail()">
+                        <input id="send-email" type="submit" value="Submit" class="btn btn-outline-light">
                     </div>
                 </form>
                 </div>
@@ -560,20 +560,23 @@
         }
     </script>
     <script>
-        function sendEmail() {
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
-        let body = `Name : ${name} <br> Email : ${email} <br> Message : ${message} <br>`;
+        var form = document.getElementById("send-email");
 
-        if (name === "" || email === "" || message === "") {
-            document.getElementById("email-submission").innerHTML = "Please fill in all the fields.";
-            document.getElementById("email-submission").style.color = "red";
-            this.finalizeEmail();
-            return;
-        }
+        function sendEmail(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            let body = `Name : ${name} <br> Email : ${email} <br> Message : ${message} <br>`;
 
-        let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+            if (name === "" || email === "" || message === "") {
+                document.getElementById("email-submission").innerHTML = "Please fill in all the fields.";
+                document.getElementById("email-submission").style.color = "red";
+                this.finalizeEmail();
+                return;
+            }
+
+            let emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
             if (!emailRegex.test(email)) {
                 document.getElementById("email-submission").innerHTML = "Please enter a valid email address.";
@@ -610,6 +613,8 @@
                 document.getElementById("email-submission").innerHTML = "";
             }, 30000)
         }
+
+        form.addEventListener('click', sendEmail);
     </script>
 </body>
 </html>
